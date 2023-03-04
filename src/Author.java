@@ -16,4 +16,9 @@ public class Author {
         return lastNameAuthor;
     }
 
+    //    Средний уровень
+
+    public String getFullNameAuthor() {
+        return firstNameAuthor + " " + lastNameAuthor;
+    }
 }
