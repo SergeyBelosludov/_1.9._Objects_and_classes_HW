@@ -9,11 +9,18 @@ public class Library {
     }
 
     public void addBook(Book book) {
+        boolean isBookAdded = false;
         for (int i = 0; i < books.length; i++) {
             if (books[i] == null) {
+                isBookAdded = true;
+            }
+            if (isBookAdded) {
                 books[i] = book;
                 break;
             }
+        }
+        if (!isBookAdded) {
+            throw new IllegalArgumentException("Книга не добавлена, т.к. места в библиотеке больше нет");
         }
     }
 
